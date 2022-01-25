@@ -1,0 +1,38 @@
+Name: BBB
+Description: サンプルBBBコンポーネント
+InputPorts: 
+ - Name: BBB入力１
+   Description: 入力１
+   SpecEngName: BBB_input1
+   PortType: b_type1
+   Length: 1,1
+   InitialValue: 0
+   FailValue: 前回値
+   ConnectedPort: CCC/CCC出力１
+OutputPorts: 
+ - Name: BBB出力１
+   Description: 出力１
+   SpecEngName: BBB_output1
+   PortType: b_type2
+   Length: 1,1
+   InitialValue: 0
+   FailValue: 前回値
+Types: 
+ - Name: b_type1
+   Description: サンプルタイプ１
+   LSB: 1
+   Offset: 0
+   Min: 0
+   Max: 200
+   Range: －
+   Unit: m/s
+   PrimitiveType: u8
+ - Name: b_type2
+   Description: サンプルタイプ２
+   LSB: 0.05
+   Offset: 0
+   Min: 0
+   Max: 10
+   Range: －
+   Unit: 1/m
+   PrimitiveType: bool

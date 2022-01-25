@@ -1,0 +1,257 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Tiny Architectre Metamodel",
+    "description": "Gitlab has a built-in solution for doing CI called Gitlab CI. It is configured by supplying a file called `.gitlab-ci.yml`, which will list all the jobs that are going to run for the project. A full list of all options can be found at https://docs.gitlab.com/ee/ci/yaml/. You can read more about Gitlab CI at https://docs.gitlab.com/ee/ci/README.html.",
+    
+    "type": "object",
+    "properties": {
+        "Name" : {
+            "type": "string",
+            "description": "このコンポーネントの名前"
+        },
+        "Description" : {
+            "type": "string",
+            "description": "このコンポーネントの説明"
+        },
+        "InputPorts" : {
+            "type": "array",
+            "description": "コンポーネントの入力ポート",
+            "minItems": 0,
+            "defaultSnippets": [
+                {
+                    "label": "🛫Create Port",
+                    "description": "新規の入力ポート作成",
+                    "body": {
+                        "Name": "",
+                        "Description": "",
+                        "SpecEngName": "",
+                        "PortType": "",
+                        "Length": "",
+                        "InitialValue": "",
+                        "FailValue": "",
+                        "ConnectedPort": ""
+                    }
+                }
+            ],
+            "items": {
+                "type": "object",
+                "required": [
+                    "Name",
+                    "Description",
+                    "SpecEngName",
+                    "PortType",
+                    "Length",
+                    "InitialValue",
+                    "FailValue",
+                    "ConnectedPort"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "Name" : {
+                        "type": "string"
+                    },
+                    "Description" : {
+                        "type": "string"
+                    },
+                    "SpecEngName" : {
+                        "type": "string",
+                        "pattern":"^[a-zA-Z]+[a-zA-Z0-9_]*[a-zA-Z0-9]+$"
+                    },
+                    "PortType" : {
+                        "type": "string"
+                    },
+                    "Length" : {
+                        "type": "string"
+                    },
+                    "InitialValue" : {
+                        "type": "number"
+                    },
+                    "FailValue" : {
+                        "type": "string"
+                    },
+                    "ConnectedPort" : {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "OutputPorts": {
+            "type": "array",
+            "description": "コンポーネントの出力ポート",
+            "minItems": 0,
+            "defaultSnippets": [
+                {
+                    "label": "🛬Create Port",
+                    "description": "新規の出力ポート作成",
+                    "body": {
+                            "Name": "",
+                            "Description": "",
+                            "SpecEngName": "",
+                            "PortType": "",
+                            "Length": "",
+                            "InitialValue": "",
+                            "FailValue": ""
+                    }
+                }
+            ],
+            "items": {
+                "type": "object",
+                "required": [
+                    "Name",
+                    "Description",
+                    "SpecEngName",
+                    "PortType",
+                    "Length",
+                    "InitialValue",
+                    "FailValue"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "Name": {
+                        "type": "string"
+                    },
+                    "Description": {
+                        "type": "string"
+                    },
+                    "SpecEngName": {
+                        "type": "string",
+                        "pattern":"^[a-zA-Z]+[a-zA-Z0-9_/]*[a-zA-Z0-9]+$"
+                    },
+                    "PortType": {
+                        "type": "string"
+                    },
+                    "Length": {
+                        "type": "string"
+                    },
+                    "InitialValue": {
+                        "type": "number"
+                    },
+                    "FailValue": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "Types": {
+            "type": "array",
+            "description": "データタイプ定義",
+            "minItems": 0,
+            "defaultSnippets": [
+                {
+                    "label": "🛬Create Type",
+                    "description": "新規のデータタイプ作成",
+                    "body": {
+                        "Name":"",
+                        "Description":"",
+                        "LSB":"",
+                        "Offset":"",
+                        "Min":"",
+                        "Max":"",
+                        "Range":"",
+                        "Unit":"",
+                        "PrimitiveType":""
+                    }
+                }
+            ],
+            "items": {
+                "type": "object",
+                "required": [
+                    "Name",
+                    "Description",
+                    "LSB",
+                    "Offset",
+                    "Min",
+                    "Max",
+                    "Range",
+                    "Unit",
+                    "PrimitiveType"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "Name": {
+                        "type": "string"
+                    },
+                    "Description": {
+                        "type": "string"
+                    },
+                    "LSB": {
+                        "type": "number"
+                    },
+                    "Offset": {
+                        "type": "number"
+                    },
+                    "Min": {
+                        "type": "number"
+                    },
+                    "Max": {
+                        "type": "number"
+                    },
+                    "Range": {
+                        "type":"string"
+                    },
+                    "Unit": {
+                        "type": "string",
+                        "enum": [
+                            "m/s^2",
+                            "m/s",
+                            "km/h",
+                            "MPH",
+                            "meter",
+                            "second",
+                            "1/R",
+                            "1/m",
+                            "A",
+                            "kg",
+                            "N",
+                            "rad",
+                            "Volt",
+                            "flg",
+                            "counter",
+                            "pixel",
+                            "Nm",
+                            "―"
+                        ]
+                    },
+                    "PrimitiveType": {
+                        "type": "string",
+                        "enum": [
+                            "i8",
+                            "i16",
+                            "i32",
+                            "i64",
+                            "u8",
+                            "u16",
+                            "u32",
+                            "u64",
+                            "f32",
+                            "f64",
+                            "char",
+                            "bool"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "Name",
+        "Description",
+        "InputPorts",
+        "OutputPorts",
+        "Types"
+    ],
+    "additionalProperties": false,
+    "defaultSnippets": [
+        {
+            "label": "📮Create Component",
+            "description": "新規コンポーネントの作成",
+            "body": {
+                "Name": "",
+                "Description": "",
+                "InputPorts": "",
+                "OutputPorts": "",
+                "Types": ""
+            }
+        }
+    ]
+}

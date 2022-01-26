@@ -1,5 +1,4 @@
 tasks:
-  - 
   #- name: test
   #  command: code --verbose
   - name: Install Poc Extesion

@@ -2,6 +2,7 @@ tasks:
   - name: test
     command: |
       code -v
+      code --install-extension mhutchie.git-graph
       code --install-extension /workspace/BBD_HandsON/vscode-yaml-tammd-3.0.0.vsix --verbose
   - name: Install Poc Extesion
     #init: code --install-extension /workspace/BBD_HandsON/vscode-yaml-tammd-3.0.0.vsix

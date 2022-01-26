@@ -1,9 +1,5 @@
-#image: ubuntu:20.04
-tasks:
-  - name: Delete BuiltIn Yaml Extension
-    before: rm -rf /ide/extensions/yaml
 vscode:
   extensions:
-    - /workspace/BBD_HandsON/vscode-yaml-tammd.vsix
+    - /workspace/BBD_HandsON/vscode-yaml-tammd-3.0.0.vsix
     - oderwat.indent-rainbow@8.2.2
     - usernamehw.errorlens@3.4.1

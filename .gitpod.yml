@@ -1,0 +1,6 @@
+image: ubuntu:20.04
+vscode:
+  extensions:
+    - /workspace/BBD_HandsON/vscode-yaml-tammd.vsix
+    - oderwat.indent-rainbow@8.2.2
+    - usernamehw.errorlens@3.4.1

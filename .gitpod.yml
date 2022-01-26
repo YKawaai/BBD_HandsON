@@ -10,6 +10,6 @@ tasks:
     command: bash -c "code --install-extension /workspace/BBD_HandsON/vscode-yaml-tammd-3.0.0.vsix --verbose" 
 vscode:
   extensions:
-    #- /workspace/BBD_HandsON/vscode-yaml-tammd-3.0.0.vsix
+    - https://github.com/YKawaai/BBD_HandsON/releases/download/3.0.0/vscode-yaml-tammd-3.0.0.vsix
     - oderwat.indent-rainbow@8.2.2
     - usernamehw.errorlens@3.4.1

@@ -1,6 +1,6 @@
 tasks:
   - name: Install Poc Extesion
-    before: code  --install-extension /workspace/BBD_HandsON/vscode-yaml-tammd-3.0.0.vsix    
+    init: code  --install-extension /workspace/BBD_HandsON/vscode-yaml-tammd-3.0.0.vsix    
 vscode:
   extensions:
     - oderwat.indent-rainbow@8.2.2

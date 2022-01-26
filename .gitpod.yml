@@ -1,5 +1,5 @@
 vscode:
   extensions:
-    - file:///workspace/bbd_handson/vscode-yaml-tammd-3.0.0.vsix
+    - /workspace/BBD_HandsON/vscode-yaml-tammd-3.0.0.vsix
     - oderwat.indent-rainbow@8.2.2
     - usernamehw.errorlens@3.4.1

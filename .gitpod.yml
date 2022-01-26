@@ -1,6 +1,6 @@
 tasks:
-  - name: test
-    command: code --verbose
+  #- name: test
+  #  command: code --verbose
   - name: Install Poc Extesion
     #init: code --install-extension /workspace/BBD_HandsON/vscode-yaml-tammd-3.0.0.vsix
     #before: code --install-extension /workspace/BBD_HandsON/vscode-yaml-tammd-3.0.0.vsix

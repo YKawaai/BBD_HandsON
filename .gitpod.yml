@@ -1,4 +1,7 @@
-image: ubuntu:20.04
+#image: ubuntu:20.04
+tasks:
+  - name: Delete BuiltIn Yaml Extension
+    before: rm -rf /ide/extensions/yaml
 vscode:
   extensions:
     - /workspace/BBD_HandsON/vscode-yaml-tammd.vsix

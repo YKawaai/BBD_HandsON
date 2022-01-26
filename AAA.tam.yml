@@ -1,38 +1,38 @@
 Name: AAA
 Description: サンプルAAAコンポーネント
 InputPorts: 
- - Name: AAA入力１
-   Description: 入力１
-   SpecEngName: AAA_input1
-   PortType: a_type1
-   Length: 1,1
-   InitialValue: 0
-   FailValue: 前回値
-   ConnectedPort: CCC/CCC出力１
+  - Name: AAA入力１
+    Description: 入力１
+    SpecEngName: AAA_input1
+    PortType: a_type1
+    Length: 1,1
+    InitialValue: 0
+    FailValue: 前回値
+    ConnectedPort: CCC/CCC出力１
 OutputPorts: 
- - Name: AAA出力１
-   Description: 出力１
-   SpecEngName: AAA_output1
-   PortType: a_type2
-   Length: 1,1
-   InitialValue: 0
-   FailValue: 前回値
+  - Name: AAA出力１
+    Description: 出力１
+    SpecEngName: AAA_output1
+    PortType: a_type2
+    Length: 1,1
+    InitialValue: 0
+    FailValue: 前回値
 Types: 
- - Name: a_type1
-   Description: サンプルタイプ１
-   LSB: 0.1
-   Offset: 0
-   Min: 0
-   Max: 200
-   Range: －
-   Unit: m/s
-   PrimitiveType: i16
- - Name: a_type2
-   Description: サンプルタイプ２
-   LSB: 0.01
-   Offset: 0
-   Min: 0
-   Max: 10
-   Range: －
-   Unit: 1/m
-   PrimitiveType: u8
+  - Name: a_type1
+    Description: サンプルタイプ１
+    LSB: 0.1
+    Offset: 0
+    Min: 0
+    Max: 200
+    Range: －
+    Unit: m/s
+    PrimitiveType: i16
+  - Name: a_type2
+    Description: サンプルタイプ２
+    LSB: 0.01
+    Offset: 0
+    Min: 0
+    Max: 10
+    Range: －
+    Unit: 1/m
+    PrimitiveType: u8

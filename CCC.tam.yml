@@ -1,37 +1,37 @@
 Name: CCC
 Description: サンプルCCCコンポーネント
 InputPorts: 
- - Name: CCC入力１
-   Description: 入力１
-   SpecEngName: CCC_input1
-   PortType: AAA/a_type2
-   Length: 1,1
-   InitialValue: 0
-   FailValue: 前回値
-   ConnectedPort: AAA/AAA出力１
- - Name: CCC入力２
-   Description: 入力２
-   SpecEngName: CCC_input2
-   PortType: BBB/b_type2
-   Length: 1,1
-   InitialValue: 0
-   FailValue: 前回値
-   ConnectedPort: BBB/BBB出力１
+  - Name: CCC入力１
+    Description: 入力１
+    SpecEngName: CCC_input1
+    PortType: AAA/a_type2
+    Length: 1,1
+    InitialValue: 0
+    FailValue: 前回値
+    ConnectedPort: AAA/AAA出力１
+  - Name: CCC入力２
+    Description: 入力２
+    SpecEngName: CCC_input2
+    PortType: BBB/b_type2
+    Length: 1,1
+    InitialValue: 0
+    FailValue: 前回値
+    ConnectedPort: BBB/BBB出力１
 OutputPorts: 
- - Name: CCC出力１
-   Description: 出力１
-   SpecEngName: CCC_output1
-   PortType: C_type1
-   Length: 1,1
-   InitialValue: 0
-   FailValue: 前回値
+  - Name: CCC出力１
+    Description: 出力１
+    SpecEngName: CCC_output1
+    PortType: C_type1
+    Length: 1,1
+    InitialValue: 0
+    FailValue: 前回値
 Types: 
- - Name: C_type1
-   Description: サンプルタイプ１
-   LSB: 1
-   Offset: 0
-   Min: 0
-   Max: 200
-   Range: －
-   Unit: m/s
-   PrimitiveType: i16
+  - Name: C_type1
+    Description: サンプルタイプ１
+    LSB: 1
+    Offset: 0
+    Min: 0
+    Max: 200
+    Range: －
+    Unit: m/s
+    PrimitiveType: i16
